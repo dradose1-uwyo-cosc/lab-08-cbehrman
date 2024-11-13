@@ -1,15 +1,19 @@
+#Caleb Behrman
+#lab section 15
+#11/12/24
+
 with open('prompt.txt', 'r') as prompt, open('out.txt', 'w') as out:
     for line in prompt:
-        output = " "
-        pairs= line.split ("\t")
+        output=" "
+        pairs=line.split ("\t")
         for pair in pairs:
             if ":" in pair:
-                key, value =pair.split(":")
+                key, value=pair.split(":")
                 value=int(value)
-                if key == "*":
-                    output += "* "*value
-                elif key == "w":
-                    output += "  "*value
-        out.write(output + "\n")
+                if key=="*":
+                    output+="* "*value
+                elif key=="w":
+                    output+="  "*value
+        out.write(output+"\n")
         
         
